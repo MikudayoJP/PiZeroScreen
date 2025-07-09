@@ -26,6 +26,7 @@ app = web.Application()
 app.add_routes([
                 web.get('/', loop_graper),
                 web.get('/{file}.css', hh.css),
+                web.get('/{file}.js', hh.js),
                 web.static('/fonts/', './fonts/'),
                 web.static('/static/', './static/'),
                 web.get('/ws', hh.websocket_handler),

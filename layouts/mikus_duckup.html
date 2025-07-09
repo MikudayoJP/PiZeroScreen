@@ -5,6 +5,7 @@
   <div class="event-section">
     <h2>Schedule:</h2>
     <iframe src='https://timetable.kitao.eu/'> title="timetable" </iframe> <!-- link to timetable -->
+    
   </div>
 
   <!-- Current Event section -->
@@ -13,6 +14,7 @@
     <h3 id="event_name"></h3>
     <p id="event_desc"></p>
     <p id="event_start"></p>
+    
   </div>
 
   <!-- Next Event section -->
@@ -28,5 +30,22 @@
     <h2>General:</h2>
     <p id="location"></p>
     <p id="msg_of_the_day" class="one_line"></p>
+    
   </div>
+
+  <!-- Progress bar section -->
+  <div class="progress-bar-container">
+    <div class="progress-bar" id="current-event-progress-bar"></div>
+    <div class="progress-bar" id="next-event-progress-bar"></div>
+  </div>
+
+  <div class="video-container">
+    <!-- Video feed -->
+    <video id="video-feed" width="480" height="270" autoplay loop>
+      <source src="https://i.4cdn.org/wsg/1752094671376323.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <script src="/table.js"></script>
 </main>

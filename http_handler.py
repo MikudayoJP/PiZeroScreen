@@ -73,6 +73,9 @@ def css(request):
     file = request.match_info.get('file', "custom")
     return web.Response(text=open("css/"+file+".css").read(), content_type='text/css')
 
+def js(request):
+    file = request.match_info.get('file', "table")
+    return web.Response(text=open("js/"+file+".js").read(), content_type='text/javascript')
 
 def get_table(request):
     file_type = request.path.split(".")[-1]
