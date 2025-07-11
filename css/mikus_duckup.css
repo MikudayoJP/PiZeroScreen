@@ -1,0 +1,177 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eac88a;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main content area styles */
+main {
+    max-width: 1400px;
+    width: 95%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* Schedule section - left side */
+.schedule-section {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Container for the right side content */
+.right-content {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container for the three sections */
+.info-sections {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Event and General sections */
+.event-section, .general-section {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Video container positioned under the three sections */
+.video-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Heading styles */
+h2 {
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+/* Subheading styles */
+h3 {
+    color: #666;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+
+/* Paragraph styles */
+p {
+    color: #888;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+/* Iframe styles */
+iframe {
+    border: none !important;
+    outline: none !important;
+    width: 100%;
+    height: calc(100vh - 200px);
+    /*height: 95vh;
+    /*height: calc(100vh - 1800px); /* Dynamic height based on viewport minus space for other elements */
+    min-height: 600px; /* Minimum height to ensure content is visible */
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: none !important;
+    overflow: auto; /* Enable scrolling if content is still too large */
+}
+
+/* Video styles */
+video {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    height: auto;
+}
+
+/* Progress bar container styles */
+.progress-bar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.progress-bar::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 100%;
+    background-color: #4CAF50;
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out;
+}
+
+/* Responsive design - only for very small screens */
+@media (max-width: 900px) {
+    main {
+        flex-direction: column;
+        width: 90%;
+    }
+    
+    .schedule-section {
+        margin-bottom: 20px;
+    }
+    
+    .info-sections {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .event-section, .general-section {
+        margin-bottom: 15px;
+    }
+    
+    iframe {
+        height: 50vh;
+    }
+}
+
+/* For very small screens */
+@media (max-width: 600px) {
+    main {
+        margin: 20px auto;
+        padding: 15px;
+    }
+    
+    h2 {
+        font-size: 1.1em;
+    }
+    
+    h3 {
+        font-size: 1em;
+    }
+    
+    p {
+        font-size: 0.85em;
+    }
+    
+    iframe {
+        height: 40vh;
+    }
+}

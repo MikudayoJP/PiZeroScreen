@@ -1,51 +1,48 @@
 <!-- LayoutConfig: current_event;next_event;msg_otd -->
-<link rel="stylesheet" href="/table.css">
+<link rel="stylesheet" href="/mikus_duckup.css">
 <main>
-  <!-- Schedule section with iframe -->
-  <div class="event-section">
-    <h2>Schedule:</h2>
-    <iframe src='https://timetable.kitao.eu/'> title="timetable" </iframe> <!-- link to timetable -->
-    
-  </div>
+        <!-- Schedule section with iframe -->
+        <div class="schedule-section">
+            <h2>Schedule:</h2>
+            <iframe src='http://192.168.43.238:8000' title="timetable"></iframe> <!-- benuzt momentan localhost timetable-->
+        </div>
 
-  <!-- Current Event section -->
-  <div class="event-section">
-    <h2>Current Event:</h2>
-    <h3 id="event_name"></h3>
-    <p id="event_desc"></p>
-    <p id="event_start"></p>
-    
-  </div>
+        <!-- Right side content -->
+        <div class="right-content">
+            <!-- Info sections container -->
+            <div class="info-sections">
+                <!-- Current Event section -->
+                <div class="event-section">
+                    <h2>Current Event:</h2>
+                    <h3 id="event_name">Sample Event</h3>
+                    <p id="event_desc">Event description goes here</p>
+                    <p id="event_start">10:00 AM</p>
+                </div>
 
-  <!-- Next Event section -->
-  <div class="event-section">
-    <h2>Next Event:</h2>
-    <h3 id="event_next_name"></h3>
-    <p id="event_next_desc"></p>
-    <p id="event_next_start"></p>
-  </div>
+                <!-- Next Event section -->
+                <div class="event-section">
+                    <h2>Next Event:</h2>
+                    <h3 id="event_next_name">Next Sample Event</h3>
+                    <p id="event_next_desc">Next event description</p>
+                    <p id="event_next_start">11:00 AM</p>
+                </div>
 
-  <!-- General section -->
-  <div class="general-section">
-    <h2>General:</h2>
-    <p id="location"></p>
-    <p id="msg_of_the_day" class="one_line"></p>
-    
-  </div>
+                <!-- General section -->
+                <div class="general-section">
+                    <h2>General:</h2>
+                    <p id="location">Location info</p>
+                    <p id="msg_of_the_day" class="one_line">Message of the day</p>
+                </div>
+            </div>
 
-  <!-- Progress bar section -->
-  <div class="progress-bar-container">
-    <div class="progress-bar" id="current-event-progress-bar"></div>
-    <div class="progress-bar" id="next-event-progress-bar"></div>
-  </div>
-
-  <div class="video-container">
-    <!-- Video feed -->
-    <video id="video-feed" width="480" height="270" autoplay loop>
-      <source src="https://i.4cdn.org/wsg/1752094671376323.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-
-  <script src="/table.js"></script>
+            <!-- Video container positioned under the three sections -->
+            <div class="video-container">
+                <video id="video-feed" width="480" height="270" autoplay loop>
+                    <source src="http://192.168.43.238:8000/data/sn.webm" type="video/webm"> <!-- benuzt momentan localhost timetable fuer video-->
+                    <source src="http://192.168.43.238:8000/data/sn.mp4" type="video/mp4"> <!-- benuzt momentan localhost timetable fuer video-->
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+  <script src="/mikus_duckup.js"></script>
 </main>
