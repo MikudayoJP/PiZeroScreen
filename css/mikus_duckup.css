@@ -4,6 +4,8 @@ body {
     background-color: #eac88a;
     margin: 0;
     padding: 0;
+    font-size: 38px;
+    /*color: #adca0a;*/ 
 }
 
 /* Main content area styles */
